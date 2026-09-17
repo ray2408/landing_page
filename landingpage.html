@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraAI - Intelligent Business Automation</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --primary-hover: #4338ca;
+      --bg-soft: #f8fafc;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: #ffffff;
+    }
+
+    /* Light Theme Styling */
+    .hero-section {
+      background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
+      padding: 100px 0 60px 0;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    .btn-outline-primary {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+
+    .btn-outline-primary:hover {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: rgba(79, 70, 229, 0.1);
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08);
+      border-color: #cbd5e1;
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--primary-color);
+      transform: scale(1.03);
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .stat-card {
+      border-right: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 767px) {
+      .stat-card {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4 text-dark" href="#">
+        <i class="bi bi-cpu-fill text-primary me-2"></i>AuraAI
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto me-4">
+          <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#solutions">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#pricing">Pricing</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="#cta" class="btn btn-outline-primary px-3 rounded-pill fw-medium">Sign In</a>
+          <a href="#cta" class="btn btn-primary px-4 rounded-pill fw-medium">Get Started Free</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section text-center text-lg-start">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="badge bg-indigo-subtle text-primary border border-primary-subtle mb-3 px-3 py-2 rounded-pill fw-semibold">
+            ✨ Powered by Next-Gen Large Language Models
+          </span>
+          <h1 class="display-4 fw-bold mb-3 text-dark">Automate Workflows with <span class="gradient-text">Smart AI Agents</span></h1>
+          <p class="lead text-secondary mb-4">
+            AuraAI empowers teams to automate customer support, optimize sales pipelines, and analyze complex data—no coding skills required.
+          </p>
+          <div class="d-sm-flex justify-content-center justify-content-lg-start gap-3 mb-4">
+            <a href="#pricing" class="btn btn-primary btn-lg px-4 rounded-pill mb-2 mb-sm-0 shadow-sm">Start 14-Day Free Trial</a>
+            <a href="#features" class="btn btn-outline-secondary btn-lg px-4 rounded-pill">Watch 2-Min Demo</a>
+          </div>
+          <p class="small text-muted mb-0"><i class="bi bi-shield-check text-success me-1"></i> No credit card required &nbsp;|&nbsp; 5-minute setup</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-white p-2 rounded-4 shadow-lg border">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Dashboard" class="img-fluid rounded-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics / Proof Section -->
+  <section class="py-4 border-y bg-light">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3 stat-card">
+          <h2 class="fw-bold text-primary mb-0">10k+</h2>
+          <p class="text-secondary small mb-0">Active Business Users</p>
+        </div>
+        <div class="col-md-3 stat-card">
+          <h2 class="fw-bold text-primary mb-0">85%</h2>
+          <p class="text-secondary small mb-0">Reduction in Support Tickets</p>
+        </div>
+        <div class="col-md-3 stat-card">
+          <h2 class="fw-bold text-primary mb-0">4.9/5</h2>
+          <p class="text-secondary small mb-0">Rating on G2 & Capterra</p>
+        </div>
+        <div class="col-md-3">
+          <h2 class="fw-bold text-primary mb-0">$12M+</h2>
+          <p class="text-secondary small mb-0">Client Costs Saved</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section -->
+  <section id="features" class="py-5">
+    <div class="container py-4">
+      <div class="text-center max-width-600 mx-auto mb-5">
+        <span class="text-primary fw-bold text-uppercase small">Key Features</span>
+        <h2 class="fw-bold mt-2">Everything You Need to Scale Smartly</h2>
+        <p class="text-secondary">Save hundreds of hours by delegating repetitive work to autonomous AI agents.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 p-4 card-hover rounded-4 bg-white">
+            <div class="feature-icon">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h3 class="fw-bold h5">Custom AI Agents</h3>
+            <p class="text-secondary">Deploy pre-trained AI bots that handle customer inquiries, route leads, and perform tasks 24/7.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 card-hover rounded-4 bg-white">
+            <div class="feature-icon">
+              <i class="bi bi-bar-chart-line"></i>
+            </div>
+            <h3 class="fw-bold h5">Predictive Analytics</h3>
+            <p class="text-secondary">Analyze trends and customer churn with advanced machine learning dashboards in real time.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 card-hover rounded-4 bg-white">
+            <div class="feature-icon">
+              <i class="bi bi-arrow-repeat"></i>
+            </div>
+            <h3 class="fw-bold h5">Auto Workflow Trigger</h3>
+            <p class="text-secondary">Automatically trigger emails, database updates, and notifications using logical rule engines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Interactive Tab/Solution Section -->
+  <section id="solutions" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-5">
+          <span class="text-primary fw-bold text-uppercase small">Tailored Workflow</span>
+          <h2 class="fw-bold mt-2 mb-3">Integrates with Your Existing Tech Stack</h2>
+          <p class="text-secondary mb-4">Connect AuraAI with over 200+ applications seamlessly. No complex API configurations required.</p>
+          
+          <div class="d-flex mb-3">
+            <div class="me-3 text-primary fs-4"><i class="bi bi-check-circle-fill"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1">1-Click Integrations</h5>
+              <p class="text-secondary small">Connect Slack, HubSpot, Salesforce, Notion, and Gmail effortlessly.</p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <div class="me-3 text-primary fs-4"><i class="bi bi-check-circle-fill"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1">SOC-2 Type II Certified</h5>
+              <p class="text-secondary small">Your data stays completely private and protected under enterprise-grade encryption standard.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="bg-white p-4 rounded-4 border shadow-sm">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3" alt="Integration Flow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container py-4">
+      <div class="text-center max-width-600 mx-auto mb-5">
+        <span class="text-primary fw-bold text-uppercase small">Testimonials</span>
+        <h2 class="fw-bold mt-2">Loved by Founders and Product Teams</h2>
+        <p class="text-secondary">See how companies use AuraAI to accelerate their operations.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 p-4 card-hover rounded-4 bg-white">
+            <div class="text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-secondary italic mb-4">"AuraAI transformed how our support team works. We handle double the tickets now without adding any extra headcount!"</p>
+            <div class="d-flex align-items-center mt-auto">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" class="avatar me-3" alt="Client">
+              <div>
+                <h6 class="fw-bold mb-0">Sarah Jenkins</h6>
+                <small class="text-muted">VP of Operations, TechFlow</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 p-4 card-hover rounded-4 bg-white">
+            <div class="text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-secondary italic mb-4">"The automated insights section helped us catch churn patterns early. It paid for itself within the first two weeks."</p>
+            <div class="d-flex align-items-center mt-auto">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" class="avatar me-3" alt="Client">
+              <div>
+                <h6 class="fw-bold mb-0">David Chen</h6>
+                <small class="text-muted">Founder, GrowthMetric</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 p-4 card-hover rounded-4 bg-white">
+            <div class="text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-secondary italic mb-4">"Simple setup, rich feature set, and reliable performance. AuraAI is a game changer for fast-scaling startups."</p>
+            <div class="d-flex align-items-center mt-auto">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" class="avatar me-3" alt="Client">
+              <div>
+                <h6 class="fw-bold mb-0">Elena Rostova</h6>
+                <small class="text-muted">Head of Product, SaaSify</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center max-width-600 mx-auto mb-5">
+        <span class="text-primary fw-bold text-uppercase small">Pricing</span>
+        <h2 class="fw-bold mt-2">Transparent Plans for Business Growth</h2>
+        <p class="text-secondary">Start free and scale as your requirements expand.</p>
+      </div>
+      <div class="row g-4 align-items-center">
+        <!-- Starter Plan -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow-sm rounded-4 p-4 card-hover bg-white">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">Starter</h3>
+              <p class="text-secondary small">Ideal for freelancers & small teams</p>
+              <h2 class="display-5 fw-bold my-3">$29<span class="fs-6 text-muted">/mo</span></h2>
+              <ul class="list-unstyled my-4">
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>Up to 3 AI Agents</li>
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>5,000 Tasks/month</li>
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>Basic Webhook Access</li>
+                <li class="mb-3 text-muted text-decoration-line-through"><i class="bi bi-x me-2"></i>Priority Support</li>
+              </ul>
+              <button class="btn btn-outline-primary w-100 rounded-pill">Choose Starter</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pro Plan (Featured) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow rounded-4 p-4 price-card featured bg-white">
+            <div class="card-body">
+              <span class="badge bg-primary mb-2 float-end">Most Popular</span>
+              <h3 class="h5 fw-bold">Pro</h3>
+              <p class="text-secondary small">For growing modern enterprises</p>
+              <h2 class="display-5 fw-bold my-3">$79<span class="fs-6 text-muted">/mo</span></h2>
+              <ul class="list-unstyled my-4">
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>Unlimited AI Agents</li>
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>50,000 Tasks/month</li>
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>Advanced Analytics</li>
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>24/7 Priority Support</li>
+              </ul>
+              <button class="btn btn-primary w-100 rounded-pill">Start 14-Day Trial</button>
+            </div>
+          </div>
+        </div>
+        <!-- Enterprise Plan -->
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="card border-0 shadow-sm rounded-4 p-4 card-hover bg-white">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">Enterprise</h3>
+              <p class="text-secondary small">Custom scale for large business</p>
+              <h2 class="display-5 fw-bold my-3">Custom</h2>
+              <ul class="list-unstyled my-4">
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>Custom Model Training</li>
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>Unlimited Tasks</li>
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>Dedicated Account Mgr</li>
+                <li class="mb-3 text-secondary"><i class="bi bi-check2 text-primary me-2"></i>99.9% SLA Guarantee</li>
+              </ul>
+              <button class="btn btn-outline-primary w-100 rounded-pill">Contact Sales</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Lead Section -->
+  <section id="cta" class="py-5 bg-primary text-white">
+    <div class="container py-4">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <h2 class="display-6 fw-bold">Ready to Elevate Your Workflow?</h2>
+          <p class="text-white-50 lead mb-0">Join over 10,000 businesses streamlining operations today.</p>
+        </div>
+        <div class="col-lg-6">
+          <form class="p-4 bg-white rounded-4 shadow">
+            <div class="mb-3">
+              <input type="text" class="form-control form-control-lg" placeholder="Full Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control form-control-lg" placeholder="Work Email" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill">Create Free Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-5 border-top">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand fw-bold fs-4 text-dark d-block mb-3" href="#">
+            <i class="bi bi-cpu-fill text-primary me-2"></i>AuraAI
+          </a>
+          <p class="text-secondary small">Empowering teams worldwide through modern artificial intelligence platforms.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold">Product</h6>
+          <ul class="list-unstyled text-secondary small">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Features</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Integrations</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold">Company</h6>
+          <ul class="list-unstyled text-secondary small">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">About Us</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Careers</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold">Legal</h6>
+          <ul class="list-unstyled text-secondary small">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Privacy Policy</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-md-flex justify-content-between align-items-center pt-4 border-top">
+        <p class="text-secondary small mb-2 mb-md-0">&copy; 2026 AuraAI Inc. All rights reserved.</p>
+        <div class="d-flex gap-3 text-secondary">
+          <a href="#" class="text-secondary"><i class="bi bi-twitter-x fs-5"></i></a>
+          <a href="#" class="text-secondary"><i class="bi bi-linkedin fs-5"></i></a>
+          <a href="#" class="text-secondary"><i class="bi bi-github fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
